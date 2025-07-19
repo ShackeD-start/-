@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+    <meta charset="UTF-8">
+    <title>Эълонҳо - somon.tj</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Эълонҳо</h1>
+        <form id="adForm">
+            <input type="text" id="title" placeholder="Унвони эълон" required>
+            <textarea id="description" placeholder="Тавсифи эълон" required></textarea>
+            <input type="number" id="price" placeholder="Нарх (сомонӣ)" min="0" step="any" required>
+            <input type="tel" id="phone" placeholder="Рақами телефон" pattern="[0-9+\-\s]{6,}" required>
+            <div class="category-row">
+                <select id="category" required></select>
+                <button type="button" id="addCategoryBtn" title="Категорияи нав">+</button>
+            </div>
+            <button type="submit">Илова кардан</button>
+        </form>
+        <input type="text" id="search" placeholder="Ҷустуҷӯ дар эълонҳо...">
+        <h2>Рӯйхати эълонҳо</h2>
+        <ul id="adsList"></ul>
+    </div>
+    <!-- Modal for adding new category -->
+    <div id="categoryModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Категорияи нав илова кунед</h3>
+        <input type="text" id="newCategoryInput" placeholder="Номи категория" maxlength="20">
+        <button id="saveCategoryBtn">Илова кардан</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
